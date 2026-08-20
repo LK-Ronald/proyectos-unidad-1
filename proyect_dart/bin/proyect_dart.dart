@@ -1,19 +1,21 @@
 void main() {
   
-  ({String nombre, int edad, double promedio}) estudiante1 = (
-    nombre: "Ronald",
-    edad: 34,
-    promedio: 4.5,
-  );
-  ({String nombre, int edad, double promedio}) estudiante2 = (
-    nombre: "Jose",
-    edad: 22,
-    promedio: 3.2,
-  );
-  ({String nombre, int edad, double promedio}) estudiante3 = (
-    nombre: "Camilo",
-    edad: 15,
-    promedio: 2.8,
-  );
+}
 
+class Estudiante {
+  String _nombre;
+  int _edad;
+  double _promedio;
+
+  Estudiante({
+    required this._nombre,
+    required this._edad,
+    required this._promedio,
+  });
+
+  void mostrarInfo() {
+    print(
+      "Informacion del estudiante: $_nombre, $_edad años, promedio $_promedio ",
+    );
+  }
 }
