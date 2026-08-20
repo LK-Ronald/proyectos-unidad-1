@@ -12,6 +12,11 @@
                 new Estudiante("Jose", 15, 2.0),
             ];
 
+            foreach (var e in estudiantes)
+            {
+                e.mostrarInfor();
+            }
+
         }
     }
 
