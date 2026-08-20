@@ -1,4 +1,10 @@
 void main() {
+
+  List<Estudiante> estudiantes = [
+    Estudiante(nombre: "Ronald", edad: 15, promedio: 5.0),
+    Estudiante(nombre: "Camilo", edad: 45, promedio: 3.5),
+    Estudiante(nombre: "Jose", edad: 15, promedio: 2.0),
+  ];
   
 }
 
@@ -15,7 +21,7 @@ class Estudiante {
 
   void mostrarInfo() {
     print(
-      "Informacion del estudiante: $_nombre, $_edad años, promedio $_promedio ",
+      'Informacion del estudiante: $_nombre, $_edad años, promedio $_promedio ',
     );
   }
 }

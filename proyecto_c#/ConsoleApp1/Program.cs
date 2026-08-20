@@ -6,7 +6,11 @@
         static void Main()
         {
 
-
+            Estudiante[] estudiantes = [
+                new Estudiante("Ronald", 15, 5.0),
+                new Estudiante("Camilo", 45, 3.5),
+                new Estudiante("Jose", 15, 2.0),
+            ];
 
         }
     }
