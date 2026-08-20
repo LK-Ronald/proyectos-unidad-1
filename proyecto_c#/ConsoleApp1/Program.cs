@@ -12,6 +12,8 @@
                 new Estudiante("Jose", 15, 2.0),
             ];
 
+            estudiantes[2].Promedio = 4.5;
+            
             foreach (var e in estudiantes)
             {
                 e.mostrarInfor();
@@ -23,9 +25,9 @@
 
     class Estudiante
     {
-        public string Nombre { get; init; }
-        public int Edad { get; init; }
-        public double Promedio { get; init; }
+        public string Nombre { get; set; }
+        public int Edad { get; set; }
+        public double Promedio { get; set; }
 
         public Estudiante(string nombre, int edad, double promedio)
         {

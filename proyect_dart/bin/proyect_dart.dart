@@ -5,6 +5,8 @@ void main() {
     Estudiante(nombre: "Jose", edad: 15, promedio: 2.0),
   ];
 
+  estudiantes[2]._promedio = 3.3;
+
   for (var e in estudiantes) {
     e.mostrarInfo();
   }
