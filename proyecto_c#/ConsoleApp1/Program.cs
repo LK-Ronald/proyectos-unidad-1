@@ -6,30 +6,50 @@
         static void Main()
         {
 
-            Estudiante[] estudiantes = [
-                new Estudiante("Ronald", 15, 5.0),
-                new Estudiante("Camilo", 45, 3.5),
-                new Estudiante("Jose", 15, 2.0),
+            EstudianteClase[] estudianteClases = [
+                new EstudianteClase("Ronald", 25, 1.3),
+                new EstudianteClase("Jose", 54, 2.5),
+                new EstudianteClase("Camilo", 34, 3.3)
             ];
 
-            estudiantes[2].Promedio = 4.5;
-            
-            foreach (var e in estudiantes)
+            foreach (var e in estudianteClases)
             {
                 e.mostrarInfor();
+            }
+
+            EstudiantStruct[] estudiantStructs = [
+                new EstudiantStruct("Jony", 25, 1.3),
+                new EstudiantStruct("Perez", 54, 2.5),
+                new EstudiantStruct("Pablo", 34, 3.3)
+            ];
+
+            foreach (var e in estudiantStructs)
+            {
+                e.mostrarInfor();
+            }
+
+            EstudiantRecord[] estudiantRecords = [
+                new EstudiantRecord("GOzales", 54, 3.3),
+                new EstudiantRecord("Pedro", 54, 3.6),
+                new EstudiantRecord("Gabriel", 23, 4.4),
+            ];
+
+            foreach (var e in estudiantRecords)
+            {
+                Console.WriteLine(e);
             }
 
         }
     }
 
 
-    class Estudiante
+    class EstudianteClase
     {
         public string Nombre { get; set; }
         public int Edad { get; set; }
         public double Promedio { get; set; }
 
-        public Estudiante(string nombre, int edad, double promedio)
+        public EstudianteClase(string nombre, int edad, double promedio)
         {
             Nombre = nombre;
             Edad = edad;
@@ -41,4 +61,25 @@
             Console.WriteLine($"Informacion del estudiante: {Nombre}, {Edad} años, promedio {Promedio} ");
         }
     }
+
+    struct EstudiantStruct
+    {
+        public string Nombre { get; set; }
+        public int Edad { get; set; }
+        public double Promedio { get; set; }
+
+        public EstudiantStruct(string nombre, int edad, double promedio)
+        {
+            Nombre = nombre;
+            Edad = edad;
+            Promedio = promedio;
+        }
+
+        public void mostrarInfor()
+        {
+            Console.WriteLine($"Informacion del estudiante: {Nombre}, {Edad} años, promedio {Promedio} ");
+        }
+    }
+
+    record EstudiantRecord(string nombre, int edad, double promedio);
 }
